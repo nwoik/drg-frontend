@@ -18,24 +18,4 @@ function App() {
   );
 }
 
-{/* <script>
-        function submitData() {
-            const form = document.getElementById('my-form');
-            var message = form.textfield.value;
-
-            fetch('/textfieldmessage', {
-                method: 'POST',
-                body: message
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    response.text().then(function (text) {
-                        const resultDiv = document.getElementById('result-message');
-                        resultDiv.textContent = text;
-                    });
-                });
-        }
-    </script> */}
 export default App;
