@@ -1,6 +1,8 @@
 import './missions.css'
-
+import { useState } from 'react';
 function Missions() {
+    const [missionData, setMissionData] = useState(null)
+
     function GetData() {
         fetch('http://localhost:8080/missions', {
             method: 'GET'
@@ -10,17 +12,18 @@ function Missions() {
                 throw new Error('Network response was not ok');
             }
             response.text().then(function (text) {
-                return (<div>{text}</div>)
+                console.log(text)
+                setMissionData(text)
             });
         });
     }
 
     return (
-        <div>
+        <div onLoad={GetData()}>
             <div>
                 <h1>MISSION 1: GET CHRIS A JOB</h1>
                 <p><i>please.</i></p>
-                <GetData />
+                <div>{missionData}</div>
             </div>
         </div>
     )
