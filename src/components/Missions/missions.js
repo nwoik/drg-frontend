@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Missions() {
     const [missionData, setMissionData] = useState(null)
 
-    function GetData() {
+    function getData() {
         fetch('http://localhost:8080/missions', {
             method: 'GET'
         })
@@ -19,7 +19,7 @@ function Missions() {
     }
 
     return (
-        <div onLoad={GetData()}>
+        <div onLoad={getData()}>
             <div>
                 <h1>MISSION 1: GET CHRIS A JOB</h1>
                 <p><i>please.</i></p>
