@@ -16,8 +16,12 @@ function Missions() {
             response.text().then(function (text) {
                 const obj = JSON.parse(text);
                 const biomes = obj["Biomes"];
+                const biome_keys = Object.keys(biomes);
                 console.log(Object.keys(biomes));
                 console.log(Object.keys(biomes).length);
+                for (let i=0; i < biome_keys.length; i++) {
+                    console.log(biome_keys[i]);
+                }
                 setMissionData(text);
             });
         });
