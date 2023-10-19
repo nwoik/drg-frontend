@@ -12,8 +12,10 @@ function Missions() {
                 throw new Error('Network response was not ok');
             }
             response.text().then(function (text) {
-                console.log(text)
-                setMissionData(text)
+                // console.log(text)
+                const obj = JSON.parse(text);
+                console.log(obj.Biomes["Fungus Bogs"]);
+                setMissionData(text);
             });
         });
     }
