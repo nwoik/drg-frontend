@@ -2,7 +2,7 @@ import './home.css'
 
 function Home() {
     return (
-        <div>
+        <div className='main'>
             <div id="page" className='missions'>
                 <img src='DRG icon.png' alt=''></img>
                 <h1>Deep Dives</h1> 

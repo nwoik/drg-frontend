@@ -9,6 +9,13 @@ body {
     src: url("../../../public/Bungee-Regular.ttf");
 }
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 #page > h1 {
     color: #ffe400;
     font-size: 5em;
@@ -21,22 +28,22 @@ body {
     width: 7.5em;
 }
 
+#page:hover {
+    border-color: #ffe400;
+    cursor: pointer;
+    width: 50%;
+    height: 58vh;
+}
+
 #page {
     background-color: rgba(0, 0, 0, 0.653);
     width: 49%;
-    margin-top: 25vh;
-    height: 50vh;
+    margin: .5em;
+    height: 55vh;
     border-top: .25em solid #f89a00;
     border-bottom: .25em solid #f89a00;
     display: flex;
     align-items: center;
-    justify-content: center
-}
-
-.missions {
-    float: left;
-}
-
-.deepdives {
-    float: right;
+    justify-content: center;
+    transition: 1s;
 }
