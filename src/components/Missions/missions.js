@@ -1,5 +1,7 @@
 import './missions.css'
 import { useState } from 'react';
+import Biome from './biomes';
+
 function Missions() {
     const [missionData, setMissionData] = useState(null)
 
@@ -12,13 +14,10 @@ function Missions() {
                 throw new Error('Network response was not ok');
             }
             response.text().then(function (text) {
-                // console.log(text)
                 const obj = JSON.parse(text);
-                console.log(obj.length);
-                for (let i=0; i < obj.length; i++) {
-                    console.log(obj[i]);
-                }
-                console.log("HIYAHIYAHIYAHIYA");
+                const biomes = obj["Biomes"];
+                console.log(Object.keys(biomes));
+                console.log(Object.keys(biomes).length);
                 setMissionData(text);
             });
         });
@@ -30,6 +29,13 @@ function Missions() {
                 <h1>MISSION 1: GET CHRIS A JOB</h1>
                 <p><i>please.</i></p>
                 <div>{missionData}</div>
+                <div className='biome-container'>
+                    {/* <ul className="biome-list">
+                        {missionData.map((x) => (
+                            <Biome missions={x} />
+                        ))}
+                    </ul> */}
+                </div>
             </div>
         </div>
     )
