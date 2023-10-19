@@ -1,12 +1,21 @@
-body {
-    background-size: cover;
-    background-image: url("../../../public/Spacerig.png");
-    margin: none;
+:root {
+    --font-size: 16px;
+    --title-shadow: calc(var(--font-size)/4) calc(var(--font-size)/2) calc(var(--font-size)/2) var(--brown);
+    --yellow: #ffe400;
+    --orange: #f89a00;
+    --brown: #8b3505;
 }
 
 @font-face {
     font-family: Bungee;
     src: url("../../../public/Bungee-Regular.ttf");
+}
+
+body {
+    background-size: cover;
+    background-image: url("../../../public/Spacerig.png");
+    margin: none;
+    font-size: var(--font-size)
 }
 
 .main {
@@ -17,19 +26,19 @@ body {
 }
 
 #page > h1 {
-    color: #ffe400;
-    font-size: 5em;
+    color: var(--yellow);
+    font-size: 4em;
     font-family: Bungee;
-    text-shadow: 4px 8px 8px #8b3505;
+    text-shadow: var(--title-shadow);
     margin: 0 .25em;
 }
 
 #page > img {
-    width: 7.5em;
+    width: 6em;
 }
 
 #page:hover {
-    border-color: #ffe400;
+    border-color: var(--yellow);
     cursor: pointer;
     width: 50%;
     height: 58vh;
@@ -40,8 +49,8 @@ body {
     width: 49%;
     margin: .5em;
     height: 55vh;
-    border-top: .25em solid #f89a00;
-    border-bottom: .25em solid #f89a00;
+    border-top: .25em solid var(--orange);
+    border-bottom: .25em solid var(--orange);
     display: flex;
     align-items: center;
     justify-content: center;
