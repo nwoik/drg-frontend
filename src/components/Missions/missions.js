@@ -14,7 +14,11 @@ function Missions() {
             response.text().then(function (text) {
                 // console.log(text)
                 const obj = JSON.parse(text);
-                console.log(obj.Biomes["Fungus Bogs"]);
+                console.log(obj.length);
+                for (let i=0; i < obj.length; i++) {
+                    console.log(obj[i]);
+                }
+                console.log("HIYAHIYAHIYAHIYA");
                 setMissionData(text);
             });
         });
