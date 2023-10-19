@@ -1,4 +1,42 @@
 body {
     background-size: cover;
     background-image: url("../../../public/Spacerig.png");
+    margin: none;
+}
+
+@font-face {
+    font-family: Bungee;
+    src: url("../../../public/Bungee-Regular.ttf");
+}
+
+#page > h1 {
+    color: #ffe400;
+    font-size: 5em;
+    font-family: Bungee;
+    text-shadow: 4px 8px 8px #8b3505;
+    margin: 0 .25em;
+}
+
+#page > img {
+    width: 7.5em;
+}
+
+#page {
+    background-color: rgba(0, 0, 0, 0.653);
+    width: 49%;
+    margin-top: 25vh;
+    height: 50vh;
+    border-top: .25em solid #f89a00;
+    border-bottom: .25em solid #f89a00;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.missions {
+    float: left;
+}
+
+.deepdives {
+    float: right;
 }
