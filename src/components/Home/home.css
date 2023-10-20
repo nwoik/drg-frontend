@@ -11,10 +11,21 @@
     src: url("../../../public/Bungee-Regular.ttf");
 }
 
+/* @media only screen and (max-width: 900px) {
+    .main {
+        display: block;
+    }
+
+    #page {
+        width: 100vw;
+    }
+
+
+} */
+
 body {
     background-size: cover;
     background-image: url("../../../public/Spacerig.png");
-    margin: none;
     font-size: var(--font-size)
 }
 
@@ -27,14 +38,14 @@ body {
 
 #page > h1 {
     color: var(--yellow);
-    font-size: 4em;
+    font-size: 4vw;
     font-family: Bungee;
     text-shadow: var(--title-shadow);
     margin: 0 .25em;
 }
 
 #page > img {
-    width: 6em;
+    width: 6vw;
 }
 
 #page:hover {
@@ -55,4 +66,5 @@ body {
     align-items: center;
     justify-content: center;
     transition: 1s;
+    text-decoration: none;
 }
